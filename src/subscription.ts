@@ -1,16 +1,11 @@
-import { defineGkdSubscription } from '@gkd-kit/define';
-import { batchImportApps } from '@gkd-kit/tools';
-import categories from './categories';
-import globalGroups from './globalGroups';
+import { defineSubscription } from "@gkd-kit/define";
 
-export default defineGkdSubscription({
-  id: 233,
-  name: 'Subscription',
-  version: 0,
-  author: 'author',
-  checkUpdateUrl: './gkd.version.json5',
-  supportUri: 'https://github.com/gkd-kit/subscription-template',
-  categories,
-  globalGroups,
-  apps: await batchImportApps(`${import.meta.dirname}/apps`),
+export default defineSubscription({
+  id: 20261121,
+  name: "自用多APP开屏跳过订阅",
+  author: "private",
+  version: 1,
+  updateUrl: "https://raw.gitmirror.com/你的用户名/仓库名/main/dist/gkd.json5",
+  checkUpdateUrl: "https://raw.gitmirror.com/你的用户名/仓库名/main/dist/gkd.json5",
+  supportUri: ""
 });
